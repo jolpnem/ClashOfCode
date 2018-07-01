@@ -6,9 +6,9 @@ public class StringUtil {
 
         return new StringBuilder(s.substring(0, firstIndex))
                 .append(s.charAt(secondIndex))
-                .append(s.substring(firstIndex + 1, secondIndex))
+                .append(s, firstIndex + 1, secondIndex)
                 .append(s.charAt(firstIndex))
-                .append(s.substring(secondIndex + 1, s.length())).toString();
+                .append(s.substring(secondIndex + 1)).toString();
     }
 
     public static String getReversed(String s) {
@@ -16,7 +16,7 @@ public class StringUtil {
 
         StringBuilder b = new StringBuilder();
         for (int i = s.length() - 1; i >= 0; i--) {
-            b.append(s.substring(i, i + 1));
+            b.append(s, i, i + 1);
         }
 
         return b.toString();

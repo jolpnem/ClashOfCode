@@ -9,7 +9,7 @@ class MIMETypes_FastSolution {
 
     static {
         try {
-            in = new Scanner(new FileInputStream(new File(path)));
+            in = new Scanner(new FileInputStream(path));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
